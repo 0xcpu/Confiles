@@ -29,6 +29,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Rust Plugin
 Plugin 'wting/rust.vim'
+Plugin 'altercation/vim-colors-solarized'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -48,6 +50,14 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+syntax enable
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+"option name default optional ------------------------------------------------ g:solarized_termcolors= 16 | 256 g:solarized_termtrans = 0 | 1 g:solarized_degrade = 0 | 1 g:solarized_bold = 1 | 0 g:solarized_underline = 1 | 0 g:solarized_italic = 1 | 0 g:solarized_contrast = "normal"| "high" or "low" g:solarized_visibility= "normal"| "high" or "low" ------------------------------------------------
+colorscheme solarized
 
 "" Un-highlight previous search
 :noremap <silent> <Space> :silent noh<Bar>echo<CR>
@@ -58,3 +68,4 @@ set expandtab
 "" For Rust, by default some operators like -> are concealed with
 "" the unicode representation. This can be disabled by setting:
 let g:no_rust_conceal = 1
+
