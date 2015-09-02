@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/ner0x652/Programming/AlgorithmsBook/Practice_and_Principles'
-let g:netrw_dirhist_2='/home/ner0x652/Programming/GitHub/llvm/test'
-let g:netrw_dirhist_3='/home/ner0x652/Programming/LLVM/llvm/include/llvm/ExecutionEngine'
-let g:netrw_dirhist_4='/home/ner0x652/Programming/HackerSchool/LLVM_pass_2/CallGraph'
-let g:netrw_dirhist_5='/home/ner0x652/Programming/GitHub/llvm-pass/.git'
-let g:netrw_dirhist_6='/home/ner0x652/Programming/GitHub/llvm-pass/CallGraph'
