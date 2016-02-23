@@ -1,3 +1,7 @@
+; store cursor at the last accessed position
+(require 'saveplace)
+(setq-default save-place t)
+
 ; Themes path
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
 
@@ -14,22 +18,15 @@
 (add-to-list 'Info-default-directory-list "~/.emacs.d/modes/haskell-mode/")
 
 ; Lua mode
-(add-to-list 'load-path "~/.emacs.d/modes/")
+(add-to-list 'load-path "~/.emacs.d/modes/lua-mode")
 
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("4294fa1b78ee65d076a1302f6ed34d42e34f637aae918b7691835adef69bd4cc" default))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
+; W3M browser
+(setq browse-url-browser-function 'w3m-browse-url)
+(autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
+(global-set-key "\C-xm" 'browse-url-at-point)
+(setq w3m-use-cookies t)
+
