@@ -12,5 +12,5 @@ set history save on
 #set history filename <fname>
 
 # -- Aliases
-# Ex: alias -s di = disas
+# Ex: alias -a di = disas
 
