@@ -1305,3 +1305,4 @@ python Dashboard.start()
 # mode: python
 # End:
 source .gdbinit-gef.py
+source .gdbinit-peda.py # peda needs its /lib files
