@@ -1304,3 +1304,4 @@ python Dashboard.start()
 # Local Variables:
 # mode: python
 # End:
+source .gdbinit-gef.py
