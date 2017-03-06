@@ -1,3 +1,7 @@
+(add-to-list 'load-path "/home/ner0x652/.emacs.d/plugins/rust-mode")
+(autoload 'rust-mode "rust-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+
 ; store cursor at the last accessed position
 (require 'saveplace)
 (setq-default save-place t)
@@ -30,3 +34,10 @@
 (global-set-key "\C-xm" 'browse-url-at-point)
 (setq w3m-use-cookies t)
 
+; Highlight current line
+(global-hl-line-mode 1)
+(set-face-background 'hl-line "#3e4446")
+;(set-face-foreground 'highlight nil)
+
+; Line numbers
+(global-linum-mode t)
